@@ -1,5 +1,5 @@
 # Static-Flow-Audit
-### Undergraduate Thesis: Research on Static Analysis & Dead Code Detection
+### Undergraduate Thesis: Research on Static Analysis & Dead Code Detection | University of Ioannina, dept. Informatics & Telecommunications
 ![Sample-Logo](images/uoi_logo_black_h200.jpg)
 
 This repository is dedicated to the **Research Phase** of my undergraduate thesis. It serves as a centralized hub for documenting theory, analyzing existing tools, and mapping the technical requirements for detecting unreachable and unused code.
