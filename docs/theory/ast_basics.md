@@ -15,5 +15,4 @@ Python provides a built-in library, the `ast` module, which allows us to:
 2. **Walk:** Traverse every node in the tree using `ast.walk()`.
 3. **Inspect:** Examine the properties of each node (line number, variable names, etc.).
 
----
 *Next Research Goal: Building a Control Flow Graph (CFG) from the AST nodes.*
