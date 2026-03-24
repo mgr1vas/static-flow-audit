@@ -34,3 +34,14 @@ To build a tool that detects Dead Code, we must understand these key compiler-sp
 | **Basic Block** | A straight-line code sequence with no branches in (except at the entry) and no branches out (except at the end). These form the nodes of a CFG. |
 | **Dead Store** | A variable assignment that is never read or used by any subsequent instruction in the program. |
 | **AST (Abstract Syntax Tree)** | A tree representation of the abstract syntactic structure of source code, where each node denotes a construct occurring in the code. |
+
+### Multi-pass vs. Single-pass Compilers
+- **Single-pass:** Scans the code once and generates target code immediately. (Fast but limited optimization).
+- **Multi-pass:** Scans the source code several times. 
+  - *Why it matters:* **Static-Flow-Audit** is a **Multi-pass** analyzer. We first build the AST (Pass 1) and then we traverse it again to find dead code (Pass 2).
+
+### Cousins of the Compiler
+To clarify our research scope, we must distinguish compilers from:
+- **Interpreters:** Execute code line-by-line without creating an executable (e.g., standard Python execution).
+- **Assemblers:** Translate assembly language into machine code.
+- **Preprocessors:** Handle directives like `#include` (C++) or imports before the actual compilation starts.
