@@ -22,3 +22,15 @@ A compiler is a software that translates a program written in high level languag
  
 ### Code Generation
 The final phase where the IR is translated into the target machine language or bytecode.
+
+### Key Concepts for Static Flow Audit
+To build a tool that detects Dead Code, we must understand these key compiler-specific concepts:
+
+| Concept | Description |
+| :--- | :--- |
+| **Static Analysis** | The process of examining source code without actually executing the program. Our tool, *Static-Flow-Audit*, is a Static Analyzer. |
+| **Control Flow Graph (CFG)** | A directed graph representation of all paths that might be traversed through a program during its execution. |
+| **Unreachable Code** | A part of the source code which can never be executed because there is no control flow path leading to it from the entry point. |
+| **Basic Block** | A straight-line code sequence with no branches in (except at the entry) and no branches out (except at the end). These form the nodes of a CFG. |
+| **Dead Store** | A variable assignment that is never read or used by any subsequent instruction in the program. |
+| **AST (Abstract Syntax Tree)** | A tree representation of the abstract syntactic structure of source code, where each node denotes a construct occurring in the code. |
