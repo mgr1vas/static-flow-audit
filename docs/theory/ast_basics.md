@@ -1,4 +1,5 @@
 # Introduction to Abstract Syntax Trees (AST)
+![AST](images/ast.png)
 
 ### What is an AST?
 An **Abstract Syntax Tree (AST)** is a hierarchical tree representation of the abstract syntactic structure of source code. Each node in the tree denotes a construct occurring in the source code, such as variable assignments, function definitions, or control flow statements (if/else, loops).
