@@ -4,20 +4,19 @@ def complex_logic(x):
     print("Step 1")
     if x > 10:
         return "Greater than 10"
-        print("I am dead inside the IF") # DEAD
+        print("Dead inside IF") # DEAD
     
-    print("Step 2 - I am alive!") 
+    print("Step 2 - Alive") 
     return "Done"
     print("Dead Body from now on") # DEAD
 """
 
 class BlockAnalyzer(ast.NodeVisitor):
     def visit_FunctionDef(self, node):
-        print(f"\n--- Checking Blocks in function: {node.name} ---")
+        print(f"\n Checking Blocks in function: {node.name}")
         self.check_body_for_dead_code(node.body)
         # Continue visiting the rest of the function body
         self.generic_visit(node)
-
     def visit_If(self, node):
         # Check the body of the 'if' statement
         self.check_body_for_dead_code(node.body)
