@@ -17,7 +17,6 @@ This roadmap outlines the strategic research phases for my undergraduate thesis.
 - [ ] **Dead Code Taxonomy:** Categorize "Unreachable code" (post-termination) vs. "Unused code" (uncalled functions).
 - [ ] **Academic Review:** Search and link 3-5 key academic papers in `/papers/`.
 
-
 ## Phase 2: Benchmarking & Tools Audit
 **Timeline: June 1, 2026 - July 15, 2026**
 *Focus: Evaluating industry standards (Vulture, Ruff).*
