@@ -45,3 +45,25 @@ To clarify our research scope, we must distinguish compilers from:
 - **Interpreters:** Execute code line-by-line without creating an executable (e.g., standard Python execution).
 - **Assemblers:** Translate assembly language into machine code.
 - **Preprocessors:** Handle directives like `#include` (C++) or imports before the actual compilation starts.
+
+### Auxiliary Components: The Symbol Table
+While the compilation phases move linearly, the **Symbol Table** is a global data structure (usually a hash table) that interacts with every phase. 
+- **Definition:** It stores information about every identifier (variables, functions, classes) such as its type, line of declaration, and scope level.
+- **In our project:** We implement a **Symbol Table Stack** to handle **Scope Resolution**. This is critical for distinguishing between Global and Local variables.
+
+### Scope Resolution & The LEGB Rule
+In Python-based static analysis, we must simulate the way the language resolves variable names. This follows the **LEGB** hierarchy:
+1. **Local:** Names assigned within a function.
+2. **Enclosing:** Names in the local scope of any enclosing functions.
+3. **Global:** Names assigned at the top-level of a module.
+4. **Built-in:** Names preassigned in the Python built-ins module.
+
+### Variable Shadowing & Dead Stores
+A significant challenge in Static Flow Audit is **Variable Shadowing**, where a local variable shares the same name as a global one. 
+- **The Problem:** A naive analyzer might link a usage in a local scope to a definition in the global scope.
+- **The Solution:** By using a **Stack of Symbol Tables**, we ensure that each scope is audited independently. A "Dead Store" (unused variable) is flagged only if it remains unreferenced within its valid lifetime (scope).
+
+### Summary of the Static Audit Process
+1. **Pass 1 (Frontend):** Parse source code into an **AST**.
+2. **Pass 2 (Semantic Analysis):** Traverse the AST to build **Symbol Tables** and resolve scopes.
+3. **Pass 3 (Optimization/Audit):** Perform **Reachability Analysis** (finding Unreachable Code) and **Liveness Analysis** (finding Dead Stores/Unused Variables).
