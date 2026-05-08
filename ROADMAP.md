@@ -9,11 +9,11 @@ This roadmap outlines the strategic research phases for my undergraduate thesis.
 ### [March 21 - April 30, 2026] - Month 1: The Building Blocks
 - [x] **AST Mastery:** Learn to use Python's `ast` module. Practice parsing strings into trees.
 - [x] **Node Exploration:** Identify core nodes (`Return`, `Assign`, `Call`, `FunctionDef`).
-- [ ] **Compiler Theory:** Study Lexical Analysis, Parsing, and the differences between Static and Dynamic Analysis.
-- [ ] **Documentation:** Summarize initial findings in `/theory/ast_basics.md`.
+- [X] **Compiler Theory:** Study Lexical Analysis, Parsing, and the differences between Static and Dynamic Analysis.
+- [X] **Documentation:** Summarize initial findings in `/theory/ast_basics.md`.
 
 ### [May 1 - May 31, 2026] - Month 2: Advanced Logic
-- [ ] **Control Flow Graphs (CFG):** Understand how programs map execution paths (nodes and edges).
+- [X] **Control Flow Graphs (CFG):** Understand how programs map execution paths (nodes and edges).
 - [ ] **Dead Code Taxonomy:** Categorize "Unreachable code" (post-termination) vs. "Unused code" (uncalled functions).
 - [ ] **Academic Review:** Search and link 3-5 key academic papers in `/papers/`.
 
