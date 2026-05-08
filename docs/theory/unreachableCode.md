@@ -13,7 +13,7 @@ Static analysis evaluates the program's source code or intermediate representati
     *   Conditional Statements (`if/else`)
     *   Loops (`for/while`)
     *   Function Calls and branching constructs.
-* **Data Flow Analysis:** This method monitors the **lifecycle of variables**, from declaration to assignment and final usage. Its primary goal is to detect **Dead Stores**—variables that are declared or assigned values but are never subsequently read or used in the source code.
+* **Data Flow Analysis:** This method monitors the **lifecycle of variables**, from declaration to assignment and final usage. Its primary goal is to detect **Dead Stores**. Variables that are declared or assigned values but are never subsequently read or used in the source code.
 
 ### 2. Dynamic Analysis Techniques
 * **Code Coverage Analysis:** This metric calculates the percentage of the codebase **exercised by a specific set of test cases**. It highlights "cold" regions of code that remain unexecuted. Common metrics include:
