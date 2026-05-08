@@ -1,5 +1,5 @@
 # Symbol Table Management
-
+![Symbol Table](../../images/symbol_table.jpg)
 
 ### Overview
 The **Symbol Table** is a crucial data structure used by compilers to store information about the identifiers occurring in the source code. In the context of static analysis, it acts as a tracking mechanism for variable lifecycles.
