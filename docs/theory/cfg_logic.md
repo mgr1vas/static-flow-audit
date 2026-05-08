@@ -1,4 +1,5 @@
 # Control Flow Analysis (CFA) & Graphs
+![Dead Code](../../images/cfg_image.png)
 
 ### Introduction to CFG
 A Control Flow Grapsh is a directed graph that represents all paths that might be traversed through a program during its execution. In a CFG, each node represents a **Basic Block**.
