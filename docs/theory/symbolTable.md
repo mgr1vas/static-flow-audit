@@ -16,3 +16,6 @@ In Python-based analysis, the Symbol Table is typically implemented as a **Dicti
 
 ### Impact on Optimization
 By identifying entries in the Symbol Table that are never marked as "used," the compiler can safely perform **Dead Code Elimination**, reducing the memory footprint of the final program.
+
+### Symbol Table Script Overview
+![Symbol Table Script](../../images/symbol_table_script.png)
